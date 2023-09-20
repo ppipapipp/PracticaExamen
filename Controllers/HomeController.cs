@@ -24,10 +24,19 @@ public class HomeController : Controller
     }
 
 
-    public IActionResult ListadoAlumnos()
+    public IActionResult ListadoAlumnos(string legajo)
     {
        List<Alumnos> _ListaDeAlumnos=BD.GetListadoAlumnos();
        ViewBag.ListaDeAlumnos=_ListaDeAlumnos;    
+
+       List<Alumnos> _ListaDePromedioMayor=BD.GetPromedioMayor(legajo);
+       ViewBag.PromedioMayor=_ListaDePromedioMayor;    
+
+       List<Alumnos> _ListaDePromedioMenor=BD.GetPromedioMenor(legajo);
+       ViewBag.PromedioMenor=_ListaDePromedioMenor;    
+       return View();
+
+
        return View();
     }
 
@@ -40,6 +49,8 @@ public class HomeController : Controller
        ViewBag.NotasAlumno=_NotasAlumno;    
        return View();
     }
+
+
 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

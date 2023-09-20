@@ -1,15 +1,36 @@
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Listado Alumnos";
 }
 
 <div class="text-center">
-    <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-        </tr>
 
-        @foreach (Alumnos alumno in ViewBag.ListaDeAlumnos){
+    
+    <table class="table table-bordered">
+    <h1>Listado de los alumnos </h1>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Detalles</th>
+            </tr>
+            @foreach (Alumnos alumno in ViewBag.ListaDeAlumnos){
+                <tr>
+                    <td>@alumno.Nombre</td>
+                    <td>@alumno.Apellido</td>
+                    <td><a href='@Url.Action("DetalleAlumnos","Home", new {legajo = alumno.Legajo})'>Ver detalles</a></td>
+                </tr>
+            }
+
+    </table>
+
+
+    <table class="table table-bordered">
+    <h2>Listado de los alumnos con promedio mayor a 6 </h2>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Detalles</th>
+            </tr>
+        @foreach (Alumnos alumno in ViewBag.PromedioMayor){
             <tr>
                 <td>@alumno.Nombre</td>
                 <td>@alumno.Apellido</td>
@@ -18,4 +39,27 @@
         }
 
     </table>
+    
+    <table class="table table-bordered">
+    <h2>Listado de los alumnos con promedio menor a 6 </h2>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Detalles</th>
+            </tr>
+         @foreach (Alumnos alumno in ViewBag.PromedioMenor){
+            <tr>
+                <td>@alumno.Nombre</td>
+                <td>@alumno.Apellido</td>
+                <td><a href='@Url.Action("DetalleAlumnos","Home", new {legajo = alumno.Legajo})'>Ver detalles</a></td>
+            </tr>
+        }
+
+    </table>
+
+
+
+ 
+
+
 </div>

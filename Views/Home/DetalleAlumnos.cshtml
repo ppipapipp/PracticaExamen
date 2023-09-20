@@ -1,30 +1,47 @@
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Detalle de alumno";
 }
 
 <div class="text-center">
-    <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Legajo</th>
-            <th>Curso</th>
-            <th>Nota</th>
-        </tr>
 
-        @foreach (Alumnos alumno in ViewBag.DetalleAlumno){
+
+
+
+   <table class="table table-bordered">
+    <h1>Detalle del alumno</h1>
+        
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Legajo</th>
+                <th>Curso</th>
+                <th>Promedio</th>
+                <th>Especialidad</th>
+                <th>Aprobado</th>
+            </tr>
+            @foreach (Alumnos alumno in ViewBag.DetalleAlumno){
             <tr>
                 <td>@alumno.Nombre</td>
                 <td>@alumno.Apellido</td>
                 <td>@alumno.Legajo</td>
                 <td>@alumno.Curso</td>
+                <td>@alumno.Promedio</td>
+                <td>@alumno.Especialidad</td>
+                @if (alumno.Promedio >= 6){
+                    <td>Si</td>
+                }
+                else{
+                    <td>No</td>
+                }
+                
             </tr>
-        }
-        @foreach (Notas nota in ViewBag.NotasAlumno){
+            }
+            @foreach (Notas nota in ViewBag.NotasAlumno){
             <tr>
                 <td>@nota.Nota</td>
             </tr>
-        }
+            }
 
     </table>
+
 </div>

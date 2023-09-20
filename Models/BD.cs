@@ -8,7 +8,7 @@ public class BD{
     public static List<Alumnos> GetListadoAlumnos(){
 
         List<Alumnos> ListadoAlumnos = new List<Alumnos>();
-        string sql = "SELECT Nombre, Apellido, Legajo, Curso FROM Alumnos;";
+        string sql = "SELECT * FROM Alumnos;";
         using(SqlConnection db = new SqlConnection(_connectionString)){
             
             ListadoAlumnos = db.Query<Alumnos>(sql).ToList();
@@ -37,6 +37,30 @@ public class BD{
         return NotasAlumno;
     }
 
+    public static List<Alumnos> GetPromedioMayor (string legajo){
+
+        List<Alumnos> PromedioMayor = new List<Alumnos>();
+        string sql = "SELECT * FROM Alumnos where Promedio >= 6;";
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            
+            PromedioMayor = db.Query<Alumnos>(sql).ToList();
+        }
+        return PromedioMayor;
+
+
+
+    }
+
+    public static List<Alumnos> GetPromedioMenor (string legajo){
+
+        List<Alumnos> PromedioMenor = new List<Alumnos>();
+        string sql = "SELECT * FROM Alumnos where Promedio < 6;";
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            
+            PromedioMenor = db.Query<Alumnos>(sql).ToList();
+        }
+        return PromedioMenor;
+    }
 
 }
 
