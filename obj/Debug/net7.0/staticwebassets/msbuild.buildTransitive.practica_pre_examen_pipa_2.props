@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\practica_pre_examen_pipa_2.props" />
+</Project>

@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>
+
+        @foreach (Alumnos alumno in ViewBag.ListaDeAlumnos){
+            <tr>
+                <td>@alumno.Nombre</td>
+                <td>@alumno.Apellido</td>
+                <td><a href='@Url.Action("DetalleAlumnos","Home", new {legajo = alumno.Legajo})'>Ver detalles</a></td>
+            </tr>
+        }
+
+    </table>
+</div>

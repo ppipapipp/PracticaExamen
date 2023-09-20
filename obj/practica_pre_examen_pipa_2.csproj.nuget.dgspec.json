@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\miled\\OneDrive\\Desktop\\-\\ORT\\2023\\Programacion\\practica_pre_examen_pipa_2\\practica_pre_examen_pipa_2.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\miled\\OneDrive\\Desktop\\-\\ORT\\2023\\Programacion\\practica_pre_examen_pipa_2\\practica_pre_examen_pipa_2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\miled\\OneDrive\\Desktop\\-\\ORT\\2023\\Programacion\\practica_pre_examen_pipa_2\\practica_pre_examen_pipa_2.csproj",
+        "projectName": "practica_pre_examen_pipa_2",
+        "projectPath": "C:\\Users\\miled\\OneDrive\\Desktop\\-\\ORT\\2023\\Programacion\\practica_pre_examen_pipa_2\\practica_pre_examen_pipa_2.csproj",
+        "packagesPath": "C:\\Users\\miled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\miled\\OneDrive\\Desktop\\-\\ORT\\2023\\Programacion\\practica_pre_examen_pipa_2\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\miled\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\sdk\\7.0.308\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.151, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.308\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
