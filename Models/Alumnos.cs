@@ -4,13 +4,13 @@ public class Alumnos{
     public string Apellido {get; set;}
     public string Legajo {get; set;}
     public string Curso {get; set;}
-
+ 
 
     public Alumnos(){
     
     }
 
-    public Alumnos(int idalumno, string nombre, string apellido, string legajo, string curso ){
+    public Alumnos(int idalumno, string nombre, string apellido, string legajo, string curso, int nota){
         IdAlumno=idalumno;
         Nombre=nombre;
         Apellido=apellido;

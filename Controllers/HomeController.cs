@@ -31,12 +31,12 @@ public class HomeController : Controller
        return View();
     }
 
-    public IActionResult DetalleAlumnos(string legajo)
+    public IActionResult DetalleAlumnos(string legajo, int idAlumno)
     {
        List<Alumnos> _DetalleAlumno=BD.GetDetalleAlumno(legajo);
        ViewBag.DetalleAlumno=_DetalleAlumno;    
-       
-       List<Notas> _NotasAlumno =BD.GetNotasAlumno(legajo);
+
+       List<Notas> _NotasAlumno=BD.GetNotasAlumno(idAlumno);
        ViewBag.NotasAlumno=_NotasAlumno;    
        return View();
     }

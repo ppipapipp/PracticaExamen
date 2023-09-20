@@ -18,7 +18,7 @@ public class BD{
 
     public static List<Alumnos> GetDetalleAlumno (string legajo){
         List<Alumnos> DetalleAlumno = null;
-        string sql = "SELECT Nombre, Apellido, Legajo, Curso FROM Alumnos WHERE Legajo = @legajo;";
+        string sql = "SELECT * FROM Alumnos WHERE Legajo = @legajo;";
         using(SqlConnection db = new SqlConnection(_connectionString)){
             
             DetalleAlumno = db.Query<Alumnos>(sql, new {legajo}).ToList();
@@ -26,12 +26,13 @@ public class BD{
         return DetalleAlumno;
     }
 
-        public static List<Notas> GetNotasAlumno (string legajo){
+
+    public static List<Notas> GetNotasAlumno (int idalumno){
         List<Notas> NotasAlumno = null;
-        string sql = "SELECT Nota FROM Notas inner join Alumnos on Alumnos.idAlumno = Notas.idAlumno WHERE Legajo = @legajo;";
+        string sql = "SELECT * FROM Notas WHERE idAlumno = @pidAlumno;";
         using(SqlConnection db = new SqlConnection(_connectionString)){
             
-            NotasAlumno = db.Query<Notas>(sql, new {legajo}).ToList();
+            NotasAlumno = db.Query<Notas>(sql, new {pidAlumno=idalumno}).ToList();
         }
         return NotasAlumno;
     }

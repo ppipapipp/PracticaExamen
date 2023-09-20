@@ -502,25 +502,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\miled\\.nuget\\packages\\": {}
+    "C:\\Users\\47807116\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\miled\\OneDrive\\Desktop\\-\\ORT\\2023\\Programacion\\practica_pre_examen_pipa_2\\practica_pre_examen_pipa_2.csproj",
+      "projectUniqueName": "C:\\Users\\47807116\\Downloads\\PracticaExamen\\practica_pre_examen_pipa_2.csproj",
       "projectName": "practica_pre_examen_pipa_2",
-      "projectPath": "C:\\Users\\miled\\OneDrive\\Desktop\\-\\ORT\\2023\\Programacion\\practica_pre_examen_pipa_2\\practica_pre_examen_pipa_2.csproj",
-      "packagesPath": "C:\\Users\\miled\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\miled\\OneDrive\\Desktop\\-\\ORT\\2023\\Programacion\\practica_pre_examen_pipa_2\\obj\\",
+      "projectPath": "C:\\Users\\47807116\\Downloads\\PracticaExamen\\practica_pre_examen_pipa_2.csproj",
+      "packagesPath": "C:\\Users\\47807116\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\47807116\\Downloads\\PracticaExamen\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\miled\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\47807116\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files\\dotnet\\sdk\\7.0.308\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -567,7 +573,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.308\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

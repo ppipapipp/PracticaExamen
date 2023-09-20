@@ -2,7 +2,6 @@ public class Notas{
     public int idAlumno {get; set;}
     public int Nota {get; set;}
 
-
     public Notas(){
     
     }
